@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>ALT'</title>
+        <style>
+            .hidden {display: none;}
+        </style>
+    </head>
+    <body>
+        <h1 id="title">ALT Monthly Random Pcik</h1>
+        <div id="order">
+            1. load data</br>
+            <input type="file" id="load_data" accept=".csv, .txt"></br></br>
+            2. input target date(Year and Month) and press run button</br>
+            <form>
+                <input
+                    id="year"
+                    required
+                    maxlength="4"
+                    type="text"
+                    placeholder="Target Year: 2022"
+                />
+                <input
+                    id="month"
+                    required
+                    maxlength="2"
+                    type="text"
+                    placeholder="Target Month: 07"
+                />
+                <input type="submit" value="run">
+            </form></br></br>
+            3. press save button</br>
+            <button id="save_data">save</button>
+        </div>
+
+        </br></br>
+        <div id="table">
+            <div id="left_side">
+                <a id="temp">asdf</a>
+            </div>
+            <div id="contents">
+
+            </div>
+        </div>
+
+        <script src="js/load_data.js"></script>
+        <script src="js/run.js"></script>
+        <script src="js/save_data"></script>
+    </body>
+</html>
