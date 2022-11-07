@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <title>ALT'</title>
-        <style>
-            .hidden {display: none;}
-        </style>
-    </head>
-    <body>
-        <h1 id="title">ALT Monthly Random Pcik</h1>
-        <div id="order">
-            1. load data</br>
-            <input type="file" id="load_data" accept=".csv, .txt"></br></br>
-            2. input target date(Year and Month) and press run button</br>
-            <form>
-                <input
-                    id="year"
-                    required
-                    maxlength="4"
-                    type="text"
-                    placeholder="Target Year: 2022"
-                />
-                <input
-                    id="month"
-                    required
-                    maxlength="2"
-                    type="text"
-                    placeholder="Target Month: 07"
-                />
-                <input type="submit" value="run">
-            </form></br></br>
-            3. press save button</br>
-            <button id="save_data">save</button>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ALT'</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        #table {
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .left_side {
+            float: left;
+            width: 30%;
+            height: 100%;
+        }
+
+        .center {
+            float: left;
+            width: 70%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">ALT Monthly Random Pcik</h1>
+    <div id="order">
+        1. 순번표 로딩</br>
+        <input type="file" id="load_data" accept=".csv, .txt"></br></br>
+        <form>
+            2. 전 달 마지막 순번 입력</br>
+            <input id="11" required maxlength="15" type="text" placeholder="마지막 11 근무자: 곽대근" />
+            <input id="12" required maxlength="15" type="text" placeholder="마지막 12 근무자: 김건우" />
+            <input class="hidden" type="submit" value="run">
+            </br></br>
+            3. 연/월 입력 후 "run" 버튼</br>
+            <input id="year" required maxlength="4" type="text" placeholder="연도: 2022" />
+            <input id="month" required maxlength="2" type="text" placeholder="월: 07" />
+            <input type="submit" value="run">
+            </br></br>
+        </form>
+        4. 저장하기</br>
+        <button id="save_data">save</button>
+    </div>
+
+    </br></br>
+    <h2>Table</h2>
+    <div id="table">
+        <div id="nav_left_side" class="left_side">
+
         </div>
+        <div id="contents" class="center">
 
-        </br></br>
-        <div id="table">
-            <div id="left_side">
-                <a id="temp">asdf</a>
-            </div>
-            <div id="contents">
-
-            </div>
         </div>
+    </div>
 
-        <script src="js/load_data.js"></script>
-        <script src="js/run.js"></script>
-        <script src="js/save_data"></script>
-    </body>
+    <script src="js/load_data.js"></script>
+    <script src="js/run.js"></script>
+    <script src="js/save_data.js"></script>
+</body>
+
 </html>
