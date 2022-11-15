@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ALT Generator</title>
+
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <h1>ALT Generator</h1>
+        <div>
+            <h3>How to Use</h3>
+            <p class="use">1. upload the order list</p>
+            <p class="use">2. check the person who work last month</p>
+            <p class="use">3. press run button</p>
+        </div>
+
+        <div id="CSVTable">
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//jquerycsvtotable.googlecode.com/files/jquery.csvToTable.js"></script>
+
+        
+
+        <script type="text/javascript" src="{{url_for('static',filename='js/main.js')}}"></script>
+    </body>
+</html>
